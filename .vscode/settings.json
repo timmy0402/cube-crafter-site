@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/b7281695-c24a-4aae-8a76-608af0481963/resourceGroups/rubik_bot/providers/Microsoft.Web/sites/cubecrafter",
+    "appService.deploySubpath": "."
+}

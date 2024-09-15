@@ -6,7 +6,8 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="nav-left">
-                <Image src="/images/logo.jpg"
+                <Image
+                    src="/images/logo.jpg"
                     alt="Cube Crafter Logo"
                     width={75}
                     height={75} />

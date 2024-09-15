@@ -1,13 +1,19 @@
+'use client'
 import Image from "next/image";
-import styles from "./page.module.css";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Hero from "../components/Hero"
 import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
-    <div>
-      <Navbar>
+    <Router>
+      <Navbar />
+      <Hero></Hero>
+    </Router>
 
-      </Navbar>
-    </div>
   );
 }

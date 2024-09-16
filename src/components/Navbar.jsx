@@ -1,5 +1,6 @@
 import React from "react";
 import Image from 'next/image';
+import Link from 'next/link';
 import '../styles/Navbar.css';
 
 const Navbar = () => {
@@ -14,10 +15,10 @@ const Navbar = () => {
                 <p>Cube Crafter</p>
             </div>
             <div className="nav-right">
-                <a href="/">Home</a>
-                <a href="/">Features</a>
-                <a href="/">Commands</a>
-                <a href="/">Contact</a>
+                <Link href="/" aria-label="Home">Home</Link>
+                <Link href="/features" aria-label="Features">Features</Link>
+                <Link href="/commands" aria-label="Commands">Commands</Link>
+                <Link href="/contact" aria-label="Contact">Contact</Link>
             </div>
         </nav>
     );

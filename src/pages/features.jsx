@@ -8,7 +8,7 @@ const Features = () => {
         <>
             <Navbar />
 
-            <div className="feature">
+            <div className="contents">
                 <h1 className="title">Features</h1>
                 <h2 className="header">Create Scramble</h2>
                 <p className="description">

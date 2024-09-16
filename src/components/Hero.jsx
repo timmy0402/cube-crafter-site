@@ -1,6 +1,6 @@
-import React from 'react';
-import '../styles/Hero.css'; // Import the CSS file for styling
-import Image from 'next/image';
+import React from "react";
+import "../styles/Hero.css";
+import Image from "next/image";
 
 const Hero = () => {
     return (
@@ -17,10 +17,20 @@ const Hero = () => {
                 </div>
                 <div className="hero-content">
                     <h1>Scramble & Solve with Ease</h1>
-                    <p>Join Cube Crafter and master the art of solving Rubik's Cubes.</p>
+                    <p>
+                        Join Cube Crafter and master the art of solving Rubik's
+                        Cubes.
+                    </p>
                     <div className="hero-buttons">
-                        <a href="https://discord.com/oauth2/authorize?client_id=1197268536918278236" className="btn">Invite Bot</a>
-                        <a href="/learn-more" className="btn">Learn More</a>
+                        <a
+                            href="https://discord.com/oauth2/authorize?client_id=1197268536918278236"
+                            className="btn"
+                        >
+                            Invite Bot
+                        </a>
+                        <a href="/features" className="btn">
+                            Learn More
+                        </a>
                     </div>
                 </div>
             </div>

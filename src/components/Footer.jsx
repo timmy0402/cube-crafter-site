@@ -1,6 +1,7 @@
 import React from "react";
-import Image from 'next/image';
-import '../styles/Footer.css'
+import Image from "next/image";
+import Link from "next/link";
+import "../styles/Footer.css";
 
 const Footer = () => {
     return (
@@ -16,8 +17,14 @@ const Footer = () => {
             <div className="footer-right">
                 <p>Cube Crafter</p>
                 <ul>
-                    <li><a>Terms of Service</a></li>
-                    <li><a>Privacy Policy</a></li>
+                    <li>
+                        <Link href="/terms" aria-label="Terms">
+                            Terms of Service
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/policy">Privacy Policy</Link>
+                    </li>
                 </ul>
             </div>
         </div>

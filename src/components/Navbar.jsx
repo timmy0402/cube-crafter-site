@@ -17,7 +17,6 @@ const Navbar = () => {
             <div className="nav-right">
                 <Link href="/" aria-label="Home">Home</Link>
                 <Link href="/features" aria-label="Features">Features</Link>
-                <Link href="/commands" aria-label="Commands">Commands</Link>
                 <Link href="/contact" aria-label="Contact">Contact</Link>
             </div>
         </nav>

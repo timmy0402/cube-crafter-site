@@ -1,13 +1,9 @@
 import React from "react";
-import '../styles/Features.css';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-
+import '../../styles/Features.css';
 
 const Policy = () => {
   return (
     <>
-      <Navbar />
       <div className="policy">
         <h1 className="header">Privacy Policy for Cube Crafter</h1>
         <h2>1. Introduction</h2>
@@ -45,7 +41,6 @@ const Policy = () => {
         <h2>7. Changes to This Privacy Policy</h2>
           <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes.</p>
       </div>
-      <Footer />
     </>
   )
 }

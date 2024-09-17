@@ -1,12 +1,9 @@
 import React from "react";
-import '../styles/Features.css';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import '../../styles/Features.css';
 
 const Terms = () => {
   return(
     <>
-      <Navbar/>
       <div className="term">
         <h1 className="header">Terms of Service for Cube Crafter</h1>
 
@@ -45,7 +42,6 @@ const Terms = () => {
         <h2>9. Changes to Terms</h2>
         <p>We may modify these Terms from time to time. We will notify you of any changes by posting the new Terms on this page. You are advised to review these Terms periodically for any changes. Your continued use of the Bot after any modifications to the Terms constitutes your acceptance of the new Terms.</p>
       </div>
-      <Footer/>
     </>
   )
 }

@@ -1,14 +1,10 @@
 import React from "react";
-import "../styles/Features.css";
+import "../../styles/Features.css";
 import Image from "next/image";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 const Features = () => {
     return (
         <>
-            <Navbar />
-
             <div className="contents">
                 <h1 className="title">Features</h1>
                 <h2 className="header">Create Scramble</h2>
@@ -46,7 +42,6 @@ const Features = () => {
                 </p>
             </div>
 
-            <Footer />
         </>
     );
 };

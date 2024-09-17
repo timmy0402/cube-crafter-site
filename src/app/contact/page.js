@@ -1,12 +1,9 @@
 import React from "react";
-import "../styles/Features.css";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import "../../styles/Features.css";
 
 const Contact = () => {
     return (
         <>
-            <Navbar />
             <div className="contact">
                 <h1>Contact Us</h1>
                 <p>
@@ -16,7 +13,6 @@ const Contact = () => {
                 <h2 className="header">Email</h2>
                 <p>cubecraftersdiscordcontact@gmail.com</p>
             </div>
-            <Footer />
         </>
     );
 };

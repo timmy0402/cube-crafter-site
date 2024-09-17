@@ -18,16 +18,47 @@ body {
   margin: 0;
 }
 
-.contents{
-  height: 100vh;
+.contents {
+  height: 125vh;
   align-items: center;
   text-align: center;
   padding: 30px;
 }
-.header{
+
+.contact {
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.policy{
+  height: 100vh;
+  align-items: center;
+  text-align: left;
+  padding: 30px;
+  margin-left: 100px;
+  margin-right: 150px;
+}
+
+.policy h2{
   padding: 10px;
 }
-.description{
-  margin-left: 100px;
-  margin-right: 100px;
+
+.policy ul{
+  padding-left: 50px;
+}
+
+.policy p{
+  padding-left: 30px;
+}
+
+.header {
+  text-align: center;
+  padding: 10px;
+}
+
+.description {
+  margin-left: 275px;
+  margin-right: 275px;
+  padding: 15px;
 }

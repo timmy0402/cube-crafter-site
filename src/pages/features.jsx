@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Features.css";
+import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -25,6 +26,12 @@ const Features = () => {
                     and competition preparation more precise and efficient than
                     ever before.
                 </p>
+                <Image
+                    src="/images/scramble_mockup.png"
+                    width={900}
+                    height={600}
+                    alt="Scramble image"
+                />
                 <p className="descrption">
                     <strong>Supported puzzle:</strong> 3x3
                 </p>

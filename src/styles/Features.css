@@ -19,7 +19,7 @@ body {
 }
 
 .contents {
-  height: 125vh;
+  height: 135vh;
   align-items: center;
   text-align: center;
   padding: 30px;
@@ -36,8 +36,8 @@ body {
   align-items: center;
   text-align: left;
   padding: 30px;
-  margin-left: 100px;
-  margin-right: 150px;
+  margin-left: 300px;
+  margin-right: 300px;
 }
 
 .policy h2{
@@ -49,6 +49,27 @@ body {
 }
 
 .policy p{
+  padding-left: 30px;
+}
+
+.term{
+  height: 130vh;
+  align-items: center;
+  text-align: left;
+  padding: 30px;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.term h2{
+  padding: 10px
+}
+
+.term ul{
+  padding-left: 50px;
+}
+
+.term p{
   padding-left: 30px;
 }
 

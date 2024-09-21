@@ -38,8 +38,17 @@ const Features = () => {
                     you to accurately measure your solving time with precision.
                 </p>
                 <p className="description">
-                    <strong>Comming: </strong> Track time and average time
+                    <strong>Now Avaliable: </strong> Timer automatically log time into database
                 </p>
+                <p className="description">
+                    Review up to <strong>10</strong> most recent solves. <strong>Delete</strong> whenver you felt like
+                </p>
+                <Image 
+                    src="/images/time_mockup.png"
+                    width={900}
+                    height={600}
+                    alt="Time image"
+                />
             </div>
 
         </>

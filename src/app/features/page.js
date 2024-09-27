@@ -23,6 +23,7 @@ const Features = () => {
                     ever before.
                 </p>
                 <Image
+                    className="feature-image"
                     src="/images/scramble_mockup.png"
                     width={900}
                     height={600}
@@ -44,6 +45,7 @@ const Features = () => {
                     Review up to <strong>10</strong> most recent solves. <strong>Delete</strong> whenver you felt like
                 </p>
                 <Image 
+                    className="feature-image"
                     src="/images/time_mockup.png"
                     width={900}
                     height={600}

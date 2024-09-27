@@ -97,3 +97,63 @@ body {
 .btn:hover {
   background-color: #0056b3;
 }
+
+@media (max-width: 768px) {
+  .policy,
+  .term,
+  .description {
+    padding: 20px;
+    margin-left: 20px; /* Adjust margins for smaller screens */
+    margin-right: 20px;
+    height: 150vh;
+  }
+
+  .contents,
+  .contact {
+    padding: 20px;
+    height: 100vh;
+  }
+
+  .policy ul,
+  .term ul {
+    padding-left: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .policy p,
+  .term p {
+    padding-left: 10px;
+  }
+
+  .btn {
+    margin-top: 30px;
+    padding: 0.5rem 1rem; /* Reduce button size */
+  }
+  .feature-image{
+    display: none;
+  }
+}
+
+/* Further adjustments for very small screens (phones) */
+@media (max-width: 480px) {
+  .policy,
+  .term,
+  .description {
+    padding: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 100%; /* Ensure full width on small screens */
+  }
+
+  .header {
+    font-size: 1.5rem; /* Adjust header font size */
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    margin-top: 20px;
+  }
+  .feature-image{
+    width: 50%;
+    height: 50%;
+  }
+}

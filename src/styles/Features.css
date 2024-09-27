@@ -83,3 +83,17 @@ body {
   margin-right: 275px;
   padding: 15px;
 }
+
+.btn {
+  background-color: #8c6e63;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  margin-top: 50px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}

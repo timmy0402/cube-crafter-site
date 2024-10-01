@@ -24,7 +24,7 @@ const Features = () => {
                 </p>
                 <Image
                     className="feature-image"
-                    src="/images/scramble_mockup.png"
+                    src="/images/scramble_mockup.webp"
                     width={900}
                     height={600}
                     alt="Scramble image"
@@ -46,7 +46,7 @@ const Features = () => {
                 </p>
                 <Image 
                     className="feature-image"
-                    src="/images/time_mockup.png"
+                    src="/images/time_mockup.webp"
                     width={900}
                     height={600}
                     alt="Time image"

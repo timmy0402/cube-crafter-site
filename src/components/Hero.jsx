@@ -8,7 +8,7 @@ const Hero = () => {
             <div className="hero-content-wrapper">
                 <div className="logo">
                     <Image
-                        src="/images/logo-transparent.png"
+                        src="/images/logo-transparent.webp"
                         alt="Cube Crafter Logo"
                         width={250}
                         height={250}

@@ -5,7 +5,9 @@ export default function Scrambler() {
     <>
       <div className="scrambler">
         <h1 className="header">Scramble Generator</h1>
-        
+        <div className="generate">
+          
+        </div>
       </div>
     </>
   );

@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "cubing": "^0.52.1",
     "next": "14.2.11",
     "react": "^18",
     "react-dom": "^18",

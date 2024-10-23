@@ -30,7 +30,7 @@ const Features = () => {
                     alt="Scramble image"
                 />
                 <p className="descrption">
-                    <strong>Supported puzzle:</strong> 3x3
+                    <strong>Supported puzzle:</strong> 2x2-7x7
                 </p>
                 <h2 className="header">Timer</h2>
                 <p className="description">

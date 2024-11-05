@@ -1,17 +1,21 @@
 import React, { useEffect } from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
-export default function Timer(){
+export default function Timer() {
     const [time, setTime] = React.useState(0);
-    const [isRunning,setIsRunning] = React.useState(false);
+    const [isRunning, setIsRunning] = React.useState(false);
+    const inputRef = useRef(null);
 
-    useEffect(() =>{
+    useEffect(() => {
+        if (inputRef.current) {
+            inputRef.current.focus();
+        }
         let intervalID;
-        if (isRunning){
-            intervalID = setInterval(() => setTime(time+1),10);
+        if (isRunning) {
+            intervalID = setInterval(() => setTime(time + 1), 10);
         }
         return () => clearInterval(intervalID);
-    },[isRunning, time]);
+    }, [isRunning, time]);
 
     // Minutes calculation
     const minutes = Math.floor((time % 360000) / 6000);
@@ -22,22 +26,38 @@ export default function Timer(){
     // Milliseconds calculation
     const milliseconds = time % 100;
 
-    const startAndStop = () => {
-        setIsRunning(!isRunning);
-    };
-
-      // Method to reset timer back to 0
+    // Method to reset timer back to 0
     const reset = () => {
         setTime(0);
     };
-    return(        
+
+    const handleKeyUp = (event) => {
+        if (event.key === " ") {
+            console.log("key up");
+        }
+    };
+
+    const handleKeyDown = (event) => {
+        if (event.key === " ") {
+            console.log("key down");
+        }
+    };
+
+    return (
         <>
             <div className="timer">
                 <p className="time">
+                    {minutes.toString().padStart(2, "0")}:
                     {seconds.toString().padStart(2, "0")}:
                     {milliseconds.toString().padStart(2, "0")}
                 </p>
+                <input
+                    ref={inputRef}
+                    type="text"
+                    onKeyDown={handleKeyDown}
+                    onKeyUp={handleKeyUp}
+                />
             </div>
         </>
-    )
+    );
 }

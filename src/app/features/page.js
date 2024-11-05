@@ -51,6 +51,15 @@ const Features = () => {
                     height={600}
                     alt="Time image"
                 />
+                <h2 className="header">Server Count</h2>
+                <a href="https://top.gg/bot/1197268536918278236">
+                    <Image 
+                        src="https://top.gg/api/widget/1197268536918278236.svg"
+                        width={300}
+                        height={200}
+                    />
+                </a>
+
             </div>
 
         </>

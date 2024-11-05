@@ -1,4 +1,5 @@
 "use client";
+import Timer from "../../components/Timer"
 import React from "react";
 import { useState, useEffect, useRef } from "react";
 import "../../styles/Scrambler.css";
@@ -114,6 +115,7 @@ export default function Scrambler() {
                 ></twisty-player>{" "}
               </div>
             )}
+            <Timer/>
           </div>
         </div>
       </div>

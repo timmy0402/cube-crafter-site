@@ -4,18 +4,45 @@ import { useState, useRef } from "react";
 export default function Timer() {
     const [time, setTime] = React.useState(0);
     const [isRunning, setIsRunning] = React.useState(false);
-    const inputRef = useRef(null);
+    const [timerID,setTimerID] = React.useState(null);
 
+    const startTimer = () => {
+        if(!isRunning){
+            setIsRunning(true);
+            const id = setInterval(() => {
+                setTime((prevTime) => prevTime + 1);
+            },10);
+            setTimerID(id);
+        }
+    };
+
+    const stopTimer = () => {
+        if(isRunning){
+            clearInterval(timerID);
+            setIsRunning(false);
+        }
+    }
     useEffect(() => {
-        if (inputRef.current) {
-            inputRef.current.focus();
-        }
-        let intervalID;
-        if (isRunning) {
-            intervalID = setInterval(() => setTime(time + 1), 10);
-        }
-        return () => clearInterval(intervalID);
-    }, [isRunning, time]);
+        const handleKeyPress = (event) => {
+          if (event.code === 'Space') {
+            event.preventDefault(); // Prevent default spacebar scroll behavior
+            if (isRunning) {
+              stopTimer();
+            } else {
+              startTimer();
+            }
+          }
+        };
+    
+        // Attach event listener
+        document.addEventListener('keydown', handleKeyPress);
+    
+        // Cleanup event listener on component unmount
+        return () => {
+          document.removeEventListener('keydown', handleKeyPress);
+          if (timerID) clearInterval(timerID);
+        };
+      }, [isRunning, timerID]);
 
     // Minutes calculation
     const minutes = Math.floor((time % 360000) / 6000);
@@ -43,6 +70,7 @@ export default function Timer() {
         }
     };
 
+
     return (
         <>
             <div className="timer">
@@ -51,12 +79,6 @@ export default function Timer() {
                     {seconds.toString().padStart(2, "0")}:
                     {milliseconds.toString().padStart(2, "0")}
                 </p>
-                <input
-                    ref={inputRef}
-                    type="text"
-                    onKeyDown={handleKeyDown}
-                    onKeyUp={handleKeyUp}
-                />
             </div>
         </>
     );

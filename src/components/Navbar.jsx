@@ -25,7 +25,6 @@ const Navbar = () => {
                 <Link href="/scrambler" aria-label="Scrambler">
                     Scrambler
                 </Link>
-                "
                 <Link href="/contact" aria-label="Contact">
                     Contact
                 </Link>

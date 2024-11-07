@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useState, useRef } from "react";
 
 export default function Timer() {
+    const [times, setTimes] = React.useState(new Array(10).fill(0));
+    const [curr, setCurr] = React.useState(0);
     const [time, setTime] = React.useState(0);
     const [isRunning, setIsRunning] = React.useState(false);
     const [isReady, setIsReady] = React.useState(false);
@@ -21,14 +23,19 @@ export default function Timer() {
         if (isRunning) {
             clearInterval(timerID);
             setIsRunning(false);
+            const newTimes = [...times];
+            newTimes[curr] = time;
+            setTimes(newTimes);
+
+            // Move to the next index and reset the current time
+            setCurr((prevCurr) => (prevCurr + 1) % 10);
+            console.log(times);
         }
     };
     useEffect(() => {
         const handleKeyPress = (event) => {
             if (event.code === "Space") {
                 event.preventDefault(); // Prevent default spacebar scroll behavior
-                console.log("press ready: " + isReady);
-                console.log("press running: " + isRunning);
                 if (!isRunning && !isReady) {
                     setIsReady(true);
                     setTime(0);
@@ -67,6 +74,9 @@ export default function Timer() {
     // Milliseconds calculation
     const milliseconds = time % 100;
 
+    const ao5 = times.slice(0, 5).reduce((a, b) => a + b, 0) / 5;
+    const ao10 = times.slice(0, 10).reduce((a, b) => a + b, 0) / 10;
+
     return (
         <>
             <div className="timer">
@@ -78,9 +88,11 @@ export default function Timer() {
             </div>
             <div className="average">
                 <div className="ao5">
-                    <p></p>
+                    <p>ao5: {ao5}</p>
                 </div>
-                <div className="ao10"></div>"
+                <div className="ao10">
+                    <p>ao10: {ao10}</p>
+                </div>
             </div>
         </>
     );

@@ -18,6 +18,7 @@ const Policy = () => {
         <ul>
           <li><strong>Discord User ID:</strong> A unique identifier assigned to you by Discord.</li>
           <li><strong>Solve Time:</strong> The time it takes for you to complete a task using our timer feature.</li>
+          <li><strong>Command Usage:</strong> The command that you used.</li>
         </ul>
         <h2>3. How We Use Your Information</h2>
         <p>We use the collected information for the following purposes: </p>

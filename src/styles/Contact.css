@@ -1,58 +1,130 @@
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+/* Contact.css */
+.contact-container {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(255,255,255,0) 0%, rgba(218, 228, 255, 0.3) 100%);
 }
 
-body {
-  background-color: #f4e6d2;
-  color: #23214c;
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.contact-card {
+    background: white;
+    width: 100%;
+    max-width: 600px;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(35, 33, 76, 0.08);
+    text-align: center;
+    border: 1px solid rgba(218, 228, 255, 0.5);
+    transition: transform 0.3s ease;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+.contact-card:hover {
+    transform: translateY(-5px);
 }
 
-.contact{
-  height: 100vh;
-  align-items: center;
-  text-align: center;
-  padding: 30px;
+.contact-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 800;
 }
 
-.header{
-  padding: 10px;
+.contact-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 3rem;
+    line-height: 1.6;
 }
 
-@media (max-width: 768px) {
-  .contact {
-    height: auto; /* Allow height to adjust based on content */
-    padding: 20px; /* Adjust padding for smaller screens */
-  }
-
-  .header {
-    padding: 15px;
-  }
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-/* Further adjustments for very small screens (phones) */
-@media (max-width: 480px) {
-  body {
-    font-size: 14px; /* Reduce font size for small screens */
-  }
+.contact-item {
+    display: flex;
+    align-items: center;
+    background: var(--background-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: left;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
 
-  .contact {
-    padding: 15px;
-    text-align: left; /* Optional: Adjust text alignment if necessary */
-  }
+.contact-item:hover {
+    background: white;
+    border-color: var(--secondary-color);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
 
-  .header {
-    padding: 10px;
-    font-size: 1.2rem; /* Adjust header font size */
-  }
+.icon-wrapper {
+    background: var(--white);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.info-content h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    margin-bottom: 0.25rem;
+    font-weight: 700;
+}
+
+.info-content p {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    word-break: break-all; /* Handles long emails */
+}
+
+/* Discord specifics */
+.discord-link {
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.discord-btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: #5865F2; /* Discord Blurple */
+    color: white;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .contact-card {
+        padding: 2rem;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .icon-wrapper {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
 }

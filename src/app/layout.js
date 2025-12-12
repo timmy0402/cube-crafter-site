@@ -16,7 +16,7 @@ const geistMono = localFont({
 
 export const metadata = {
   title: "Cube Crafter",
-  description: "A scramble discord bot",
+  description: "The ultimate Discord bot for speedcubers. Generate scrambles, time your solves, and track your progress.",
 };
 
 export default function RootLayout({ children }) {

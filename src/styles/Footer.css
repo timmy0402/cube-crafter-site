@@ -1,13 +1,12 @@
 /* Default desktop styles */
 .footer {
     display: flex;
-    background-color: #dae4ff;
+    background-color: var(--secondary-color);
     justify-content: space-between; 
     align-items: center;
-    padding: 10px 20px;
-    bottom: 0;
-    position: fixed;
+    padding: 20px; /* Increased padding */
     width: 100%;
+    margin-top: auto; /* Push to bottom if flex container */
 }
 
 .footer-left {
@@ -16,7 +15,7 @@
 }
 
 .footer-right {
-    color: #23214c;
+    color: var(--primary-color);
     font-weight: bold;
 }
 
@@ -24,23 +23,26 @@
     list-style: none; 
     padding: 0;
     margin: 0;
+    display: flex; /* Horizontal list for desktop usually looks better, but keeping logic similar */
+    gap: 15px;
 }
 
 
 .footer-right a {
     text-decoration: none;
-    color: #23214c;
+    color: var(--primary-color);
+    transition: color 0.3s;
 }
 
 .footer-right a:hover {
-    color: #342f9b;
+    color: var(--primary-hover);
 }
 
 /* Responsive styles for phones */
 @media (max-width: 768px) {
     .footer {
-        align-items: flex;
-        padding: 15px;
+        flex-direction: column;
+        align-items: flex-start;
         position: static; 
     }
 
@@ -48,14 +50,8 @@
         margin-bottom: 15px;
     }
 
-    .footer-right ul li {
-        display: block;
-        margin-right: 0;
-        margin-bottom: 10px; 
-        text-align: left;
-    }
-
     .footer-right ul {
-        text-align: center; 
+        flex-direction: column;
+        gap: 10px;
     }
 }

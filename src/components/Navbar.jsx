@@ -8,7 +8,7 @@ const Navbar = () => {
         <nav className="navbar">
             <div className="nav-left">
                 <Image
-                    src="/images/logo.webp"
+                    src="/images/logo-transparent.webp"
                     alt="Cube Crafter Logo"
                     width={75}
                     height={75} />

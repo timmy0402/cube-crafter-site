@@ -1,138 +1,152 @@
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+/* Features.css - Shared styles for content pages */
+
+.features-container,
+.contents,
+.contact,
+.policy,
+.term {
+  min-height: 80vh;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: var(--primary-color);
 }
 
-body {
-  background-color: #f4e6d2;
-  color: #23214c;
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-.contents {
-  height: 215vh;
-  align-items: center;
+/* Header Section */
+.features-header {
   text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Grid Layout */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  align-items: start;
+}
+
+/* Feature Cards */
+.feature-card {
+  background: white;
+  border-radius: 16px;
   padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.card-description {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1; /* Pushes footer/image to bottom */
+}
+
+.feature-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 15px;
+  border: 1px solid #eee;
+}
+
+/* Feature List (Timer) */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  text-align: left;
+}
+
+.feature-list li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Badges */
+.card-footer {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Legacy styles for other pages (Policy, Terms) */
+.contact,
+.policy,
+.term {
+  max-width: 800px; /* Narrower reading width */
 }
 
 .contact {
-  align-items: center;
-  text-align: center;
-  padding: 30px;
+    text-align: center;
 }
 
-.policy{
-  height: 100vh;
-  align-items: center;
-  text-align: left;
-  padding: 30px;
-  margin-left: 300px;
-  margin-right: 300px;
+.policy h2, .term h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
 }
 
-.policy h2{
-  padding: 10px;
+.policy ul, .term ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
 }
 
-.policy ul{
-  padding-left: 50px;
+.policy p, .term p {
+    margin-bottom: 15px;
+    line-height: 1.7;
 }
 
-.policy p{
-  padding-left: 30px;
-}
 
-.term{
-  height: 130vh;
-  align-items: center;
-  text-align: left;
-  padding: 30px;
-  margin-left: 300px;
-  margin-right: 300px;
-}
-
-.term h2{
-  padding: 10px
-}
-
-.term ul{
-  padding-left: 50px;
-}
-
-.term p{
-  padding-left: 30px;
-}
-
-.header {
-  text-align: center;
-  padding: 10px;
-}
-
-.description {
-  margin-left: 275px;
-  margin-right: 275px;
-  padding: 15px;
-}
-
-.btn {
-  background-color: #8c6e63;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  margin-top: 50px;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.btn:hover {
-  background-color: #0056b3;
-}
-
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .policy,
-  .term,
-  .description {
-    padding: 20px;
-    margin-left: 20px; 
-    margin-right: 20px;
-    height: auto;
-  }
-
-  .contents{
-    padding: 20px;
-    height: auto;
+  .title {
+    font-size: 2.5rem;
   }
   
-  .contact {
-    padding: 20px;
-    height: 70vh;
-  }
-
-  .policy ul,
-  .term ul {
-    padding-left: 15px; 
-  }
-
-  .policy p,
-  .term p {
-    padding-left: 10px;
-  }
-
-  .btn {
-    margin-top: 30px;
-    padding: 0.5rem 1rem; 
-  }
-  .feature-image{
-    display: none !important;
+  .features-grid {
+    grid-template-columns: 1fr; /* Stack on mobile */
   }
 }

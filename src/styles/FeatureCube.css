@@ -1,0 +1,126 @@
+.scene {
+  width: 100%;
+  height: 600px;
+  perspective: 1500px; /* Gives the 3D depth */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  overflow: hidden; /* Prevent horizontal scrollbars during rotation */
+}
+
+.cube {
+  width: 500px; /* Fixed reference size */
+  height: 500px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Bouncy rotation */
+}
+
+.cube__face {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: white;
+  border: 4px solid var(--primary-color);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  box-shadow: inset 0 0 50px rgba(0,0,0,0.05);
+  backface-visibility: hidden; /* Hides the back of the panel */
+  opacity: 0.98; /* Slight transparency */
+}
+
+/* Positioning the 4 faces of the carousel */
+.cube__face--front  { transform: rotateY(  0deg) translateZ(250px); }
+.cube__face--right  { transform: rotateY( 90deg) translateZ(250px); }
+.cube__face--back   { transform: rotateY(180deg) translateZ(250px); }
+.cube__face--left   { transform: rotateY(270deg) translateZ(250px); }
+
+/* Decoration to make it look more like a Rubik's cube face */
+.cube__face::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 16px;
+  border: 2px solid rgba(35, 33, 76, 0.1);
+  pointer-events: none;
+  background-image: 
+    linear-gradient(rgba(35, 33, 76, 0.05) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(35, 33, 76, 0.05) 2px, transparent 2px);
+  background-size: 166px 166px; /* Creates a 3x3 grid look (500/3 approx) */
+  z-index: -1;
+}
+
+/* Content styling inside faces */
+.face-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  background: var(--secondary-color);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.face-title {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  background: white; /* overlay the grid lines */
+  padding: 0 10px;
+}
+
+.face-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  background: rgba(255,255,255,0.9);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.control-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.control-btn:hover {
+  background: var(--primary-hover);
+  transform: scale(1.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .scene {
+    transform: scale(0.65); /* Scale down the whole scene */
+    height: 400px; /* Adjust height container */
+    margin: 0;
+  }
+}

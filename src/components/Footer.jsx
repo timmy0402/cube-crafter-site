@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="footer">
             <div className="footer-left">
                 <Image
-                    src="/images/logo.webp"
+                    src="/images/logo-transparent.webp"
                     alt="Cube Crafter Logo"
                     width={100}
                     height={100}

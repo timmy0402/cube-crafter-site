@@ -15,8 +15,30 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Cube Crafter",
+  metadataBase: new URL('https://cubecrafter.azurewebsites.net/'),
+  title: {
+    default: "Cube Crafter",
+    template: "%s | Cube Crafter"
+  },
   description: "The ultimate Discord bot for speedcubers. Generate scrambles, time your solves, and track your progress.",
+  keywords: ["Rubik's Cube", "Speedcubing", "Discord Bot", "Cube Timer", "Scramble Generator", "Speedsolving"],
+  authors: [{ name: "Cube Crafter Team" }],
+  creator: "Cube Crafter Team",
+  openGraph: {
+    title: "Cube Crafter - The Ultimate Speedcubing Discord Bot",
+    description: "Generate scrambles, time your solves, and track your progress directly in Discord.",
+    url: 'https://cubecrafter.azurewebsites.net/',
+    siteName: 'Cube Crafter',
+    locale: 'en_US',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  verification: {
+    google: 'google26571947d0b2bcc9',
+  },
 };
 
 export default function RootLayout({ children }) {

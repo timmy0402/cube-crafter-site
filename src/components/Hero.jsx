@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Hero.css";
 import Image from "next/image";
+import ServerCount from "./ServerCount";
 
 const Hero = () => {
     return (
@@ -21,6 +22,7 @@ const Hero = () => {
                         Join Cube Crafter and master the art of solving Rubik's
                         Cubes.
                     </p>
+                    <ServerCount />
                     <div className="hero-buttons">
                         <a
                             href="https://discord.com/oauth2/authorize?client_id=1197268536918278236"

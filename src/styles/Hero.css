@@ -1,6 +1,9 @@
 .hero {
-    background: linear-gradient(135deg, var(--background-color) 0%, #dbeafe 100%); /* Subtle gradient */
-    height: 85vh; /* Slight increase */
+    background: linear-gradient(135deg, var(--background-color) 0%, #dbeafe 100%);
+    /* Subtle gradient */
+    min-height: 85vh;
+    height: 85dvh;
+    /* Slight increase, mobile friendly */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +22,7 @@
     right: -50%;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(218, 228, 255, 0.5) 0%, rgba(255,255,255,0) 70%);
+    background: radial-gradient(circle, rgba(218, 228, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
     z-index: 0;
     pointer-events: none;
 }
@@ -34,13 +37,22 @@
 
 .logo {
     margin-bottom: 30px;
-    animation: float 6s ease-in-out infinite; /* Floating animation */
+    animation: float 6s ease-in-out infinite;
+    /* Floating animation */
 }
 
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .centered-logo {
@@ -48,7 +60,8 @@
     margin: 0 auto;
     width: auto;
     height: auto;
-    filter: drop-shadow(0 10px 15px rgba(35, 33, 76, 0.2)); /* Shadow for depth */
+    filter: drop-shadow(0 10px 15px rgba(35, 33, 76, 0.2));
+    /* Shadow for depth */
 }
 
 .hero-content {
@@ -66,7 +79,8 @@
 .hero p {
     font-size: 1.25rem;
     margin-bottom: 2.5rem;
-    color: #4a5568; /* Slightly softer text color for description */
+    color: #4a5568;
+    /* Slightly softer text color for description */
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -78,7 +92,8 @@
     padding: 1rem 2rem;
     margin: 0 0.75rem;
     text-decoration: none;
-    border-radius: 50px; /* Pill shape */
+    border-radius: 50px;
+    /* Pill shape */
     font-weight: 600;
     transition: all 0.3s ease;
     box-shadow: 0 4px 14px 0 rgba(35, 33, 76, 0.39);
@@ -135,7 +150,7 @@
     .hero h1 {
         font-size: 2rem;
     }
-    
+
     .hero-buttons {
         display: flex;
         flex-direction: column;

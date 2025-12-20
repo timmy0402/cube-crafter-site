@@ -1,26 +1,32 @@
 .scene {
   width: 100%;
   height: 600px;
-  perspective: 1500px; /* Gives the 3D depth */
+  perspective: 1500px;
+  /* Gives the 3D depth */
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 40px 0;
-  overflow: hidden; /* Prevent horizontal scrollbars during rotation */
+  overflow: hidden;
+  /* Prevent horizontal scrollbars during rotation */
 }
 
 .cube {
-  width: 500px; /* Fixed reference size */
-  height: 500px;
+  /* --cube-size: 500px; */
+  --cube-size: min(500px, 90vw);
+  width: var(--cube-size);
+  /* Fixed reference size */
+  height: var(--cube-size);
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 1s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Bouncy rotation */
+  transition: transform 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  /* Bouncy rotation */
 }
 
 .cube__face {
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: var(--cube-size);
+  height: var(--cube-size);
   background: white;
   border: 4px solid var(--primary-color);
   border-radius: 20px;
@@ -30,29 +36,46 @@
   align-items: center;
   text-align: center;
   padding: 40px;
-  box-shadow: inset 0 0 50px rgba(0,0,0,0.05);
-  backface-visibility: hidden; /* Hides the back of the panel */
-  opacity: 0.98; /* Slight transparency */
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.05);
+  backface-visibility: hidden;
+  /* Hides the back of the panel */
+  opacity: 0.98;
+  /* Slight transparency */
 }
 
 /* Positioning the 4 faces of the carousel */
-.cube__face--front  { transform: rotateY(  0deg) translateZ(250px); }
-.cube__face--right  { transform: rotateY( 90deg) translateZ(250px); }
-.cube__face--back   { transform: rotateY(180deg) translateZ(250px); }
-.cube__face--left   { transform: rotateY(270deg) translateZ(250px); }
+.cube__face--front {
+  transform: rotateY(0deg) translateZ(calc(var(--cube-size) / 2));
+}
+
+.cube__face--right {
+  transform: rotateY(90deg) translateZ(calc(var(--cube-size) / 2));
+}
+
+.cube__face--back {
+  transform: rotateY(180deg) translateZ(calc(var(--cube-size) / 2));
+}
+
+.cube__face--left {
+  transform: rotateY(270deg) translateZ(calc(var(--cube-size) / 2));
+}
 
 /* Decoration to make it look more like a Rubik's cube face */
 .cube__face::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   border-radius: 16px;
   border: 2px solid rgba(35, 33, 76, 0.1);
   pointer-events: none;
-  background-image: 
+  background-image:
     linear-gradient(rgba(35, 33, 76, 0.05) 2px, transparent 2px),
     linear-gradient(90deg, rgba(35, 33, 76, 0.05) 2px, transparent 2px);
-  background-size: 166px 166px; /* Creates a 3x3 grid look (500/3 approx) */
+  background-size: calc(var(--cube-size) / 3) calc(var(--cube-size) / 3);
+  /* Creates a 3x3 grid look */
   z-index: -1;
 }
 
@@ -67,14 +90,15 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .face-title {
   font-size: 2rem;
   color: var(--primary-color);
   margin-bottom: 15px;
-  background: white; /* overlay the grid lines */
+  background: white;
+  /* overlay the grid lines */
   padding: 0 10px;
 }
 
@@ -82,7 +106,7 @@
   font-size: 1.1rem;
   line-height: 1.6;
   color: #555;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
   padding: 10px;
   border-radius: 8px;
 }
@@ -108,7 +132,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .control-btn:hover {
@@ -118,9 +142,47 @@
 
 /* Mobile Responsiveness */
 @media (max-width: 600px) {
+  /* OLD SCALE METHOD REMOVED 
   .scene {
-    transform: scale(0.65); /* Scale down the whole scene */
-    height: 400px; /* Adjust height container */
+    transform: scale(0.65); 
+    height: 400px;
     margin: 0;
+  }
+  */
+}
+
+@media (max-width: 768px) {
+  .scene {
+    height: auto;
+    perspective: none;
+    margin: 20px 0;
+  }
+
+  .cube {
+    width: 100%;
+    height: auto;
+    transform: none !important;
+    /* Disable rotation */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cube__face {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    transform: none !important;
+    /* Reset 3D positioning */
+    border: 2px solid var(--primary-color);
+    opacity: 1;
+    backface-visibility: visible;
+    margin-bottom: 20px;
+  }
+
+  /* Hide rotation controls on mobile */
+  .controls {
+    display: none;
   }
 }

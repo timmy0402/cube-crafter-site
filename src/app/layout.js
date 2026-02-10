@@ -21,7 +21,7 @@ export const metadata = {
     template: "%s | Cube Crafter"
   },
   description: "The ultimate Discord bot for speedcubers. Generate scrambles, time your solves, and track your progress.",
-  keywords: ["Rubik's Cube", "Speedcubing", "Discord Bot", "Cube Timer", "Scramble Generator", "Speedsolving"],
+  keywords: ["Rubik's Cube", "Speedcubing", "Discord Bot", "Cube Timer", "Scramble Generator", "Speedsolving", "Rubik's Bot", "Cube Tracking", "Cubing Community"],
   authors: [{ name: "Cube Crafter Team" }],
   creator: "Cube Crafter Team",
   openGraph: {

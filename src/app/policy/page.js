@@ -23,7 +23,7 @@ const Policy = () => {
         <h2>3. How We Use Your Information</h2>
         <p>We use the collected information for the following purposes: </p>
         <ul>
-          <li><strong>To Provide and Improve Our Services:</strong> We use your Discord User ID and solve time to track your progress and enhance your experience with our bot</li>
+          <li><strong>To Provide and Improve Our Services:</strong> We use your Discord User ID, solve times, and pullze type to track your progress and enhance your experience with our bot</li>
           <li><strong>Analytics:</strong> We analyze the collected data to understand user average time.</li>
         </ul>
         <h2>4. Data Storage and Security</h2>

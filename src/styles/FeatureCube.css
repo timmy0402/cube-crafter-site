@@ -22,12 +22,12 @@
   position: absolute;
   width: var(--cube-size);
   height: var(--cube-size);
-  background: white;
+  background: var(--bg-card);
   border: 2px solid var(--primary-color);
   border-radius: 24px;
   overflow: hidden; /* Critical for full-face images */
   backface-visibility: hidden;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 50px var(--shadow-color);
 }
 
 /* 3D Positioning */
@@ -62,11 +62,11 @@
   left: 0;
   width: 100%;
   padding: 25px;
-  background: rgba(255, 255, 255, 0.85);
+  background: var(--bg-navbar-blur);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   z-index: 2;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid var(--border-transparent);
   text-align: left;
   transform: translateY(20px);
   transition: transform 0.4s ease, background 0.4s ease;
@@ -74,7 +74,7 @@
 
 .cube__face:hover .face-overlay {
   transform: translateY(0);
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--bg-navbar);
 }
 
 .face-header {
@@ -104,7 +104,7 @@
 .face-description {
   font-size: 0.95rem;
   line-height: 1.5;
-  color: #444;
+  color: var(--text-main);
   margin: 0;
 }
 
@@ -130,7 +130,7 @@
 }
 
 .control-btn {
-  background: white;
+  background: var(--bg-card);
   color: var(--primary-color);
   border: 2px solid var(--primary-color);
   width: 55px;
@@ -142,14 +142,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 15px var(--shadow-color);
 }
 
 .control-btn:hover {
   background: var(--primary-color);
   color: white;
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(35, 33, 76, 0.2);
+  box-shadow: 0 8px 25px var(--shadow-strong);
 }
 
 /* Mobile Responsiveness */

@@ -1,5 +1,5 @@
 .hero {
-    background: linear-gradient(135deg, var(--background-color) 0%, #dbeafe 100%);
+    background: linear-gradient(135deg, var(--bg-main) 0%, var(--bg-gradient-end) 100%);
     /* Subtle gradient */
     min-height: 85vh;
     height: 85dvh;
@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--text-color);
+    color: var(--text-main);
     text-align: center;
     padding: 0 2rem;
     position: relative;
@@ -22,7 +22,7 @@
     right: -50%;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(218, 228, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+    background: radial-gradient(circle, var(--bg-navbar-blur) 0%, rgba(255, 255, 255, 0) 70%);
     z-index: 0;
     pointer-events: none;
 }
@@ -60,7 +60,7 @@
     margin: 0 auto;
     width: auto;
     height: auto;
-    filter: drop-shadow(0 10px 15px rgba(35, 33, 76, 0.2));
+    filter: drop-shadow(0 10px 15px var(--shadow-strong));
     /* Shadow for depth */
 }
 
@@ -79,7 +79,7 @@
 .hero p {
     font-size: 1.25rem;
     margin-bottom: 2.5rem;
-    color: #4a5568;
+    color: var(--text-muted);
     /* Slightly softer text color for description */
     max-width: 600px;
     margin-left: auto;
@@ -87,8 +87,8 @@
 }
 
 .hero-buttons .btn {
-    background-color: var(--primary-color);
-    color: var(--white);
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
     padding: 1rem 2rem;
     margin: 0 0.75rem;
     text-decoration: none;
@@ -96,13 +96,13 @@
     /* Pill shape */
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 14px 0 rgba(35, 33, 76, 0.39);
+    box-shadow: 0 4px 14px 0 var(--shadow-strong);
 }
 
 .hero-buttons .btn:hover {
     background-color: var(--primary-hover);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(35, 33, 76, 0.23);
+    box-shadow: 0 6px 20px var(--shadow-strong);
 }
 
 /* Secondary button style */
@@ -120,14 +120,14 @@
 
 .server-count-badge {
     display: inline-block;
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--card-bg-transparent);
     padding: 0.5rem 1rem;
     border-radius: 50px;
     font-size: 1rem;
     color: var(--primary-color);
     margin-bottom: 2rem;
     margin-top: -1rem;
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    border: 1px solid var(--border-transparent);
     backdrop-filter: blur(4px);
 }
 

@@ -1,11 +1,55 @@
 :root {
-  /* Logo-based Palette */
+  /* Base Palette - Light */
   --primary-color: #23214c;   /* Dark Indigo (Text, Buttons, Logo Lines) */
   --primary-hover: #342f9b;   /* Brighter Blue for hover states */
   --secondary-color: #dae4ff; /* Light Lavender (Navbar, Footer, Accents) */
   --background-color: #f0f4ff; /* Very pale blue for main background */
   --text-color: #23214c;
   --white: #ffffff;
+
+  /* Semantic Variables */
+  --bg-main: var(--background-color);
+  --bg-card: var(--white);
+  --bg-navbar: rgba(218, 228, 255, 0.95);
+  --bg-navbar-blur: rgba(218, 228, 255, 0.5);
+  --text-main: var(--text-color);
+  --text-muted: #666;
+  --text-inverted: #ffffff;
+  --border-color: #eee;
+  --shadow-color: rgba(0, 0, 0, 0.05);
+  --shadow-strong: rgba(35, 33, 76, 0.2);
+  --btn-bg: var(--primary-color);
+  --btn-text: #ffffff;
+  --bg-gradient-end: #dbeafe;
+  --card-bg-transparent: rgba(255, 255, 255, 0.5);
+  --border-transparent: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme='dark'] {
+  /* Dark Mode Palette */
+  --primary-color: #a5b4fc; /* Light Indigo/Lavender for text/icons */
+  --primary-hover: #818cf8;
+  --secondary-color: #312e81; /* Darker Indigo for accents */
+  --background-color: #0f172a; /* Slate 900 */
+  --text-color: #e2e8f0; /* Slate 200 */
+  --white: #1e293b; /* Slate 800 (Card BG) */
+
+  /* Semantic Overrides */
+  --bg-main: var(--background-color);
+  --bg-card: var(--white);
+  --bg-navbar: rgba(15, 23, 42, 0.95);
+  --bg-navbar-blur: rgba(15, 23, 42, 0.5);
+  --text-main: var(--text-color);
+  --text-muted: #94a3b8;
+  --text-inverted: #0f172a; /* Dark text on light buttons */
+  --border-color: #334155;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --shadow-strong: rgba(0, 0, 0, 0.7);
+  --btn-bg: var(--primary-color);
+  --btn-text: #0f172a; /* Dark text on light button */
+  --bg-gradient-end: #1e1b4b; /* Dark indigo */
+  --card-bg-transparent: rgba(30, 41, 59, 0.5);
+  --border-transparent: rgba(255, 255, 255, 0.1);
 }
 
 html,
@@ -15,11 +59,12 @@ body {
 }
 
 body {
-  color: var(--text-color);
-  background: var(--background-color);
+  color: var(--text-main);
+  background: var(--bg-main);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 * {

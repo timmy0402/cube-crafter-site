@@ -19,7 +19,7 @@ const ServerCount = () => {
 
     return (
         <span className="server-count-badge">
-            Build with <strong>{count} communities</strong>
+            Currently serving <strong>{count} servers</strong>
         </span>
     );
 };

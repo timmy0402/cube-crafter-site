@@ -10,7 +10,7 @@ import ArrowLeft from './icons/ArrowLeft';
 import ArrowRight from './icons/ArrowRight';
 
 // Static imports
-import rubikImg from '../../public/images/rubik.jpg';
+import rubikImg from '../../public/images/rubik.webp';
 import scrambleMockup from '../../public/images/scramble_mockup.webp';
 import timeMockup from '../../public/images/time_mockup.webp';
 
@@ -28,7 +28,7 @@ const FeatureCube = () => {
           {/* Face 1: Scramble */}
           <div className="cube__face cube__face--front">
             <div className="face-image-bg">
-              <Image src={rubikImg} alt="Variety of WCA puzzles" fill placeholder="blur" />
+              <Image src={rubikImg} alt="Variety of WCA puzzles" fill placeholder="blur" priority/>
             </div>
             <div className="face-overlay">
               <div className="face-header">
@@ -44,7 +44,7 @@ const FeatureCube = () => {
           {/* Face 2: Image Generation */}
           <div className="cube__face cube__face--right">
             <div className="face-image-bg">
-              <Image src={scrambleMockup} alt="Scramble Mockup" fill placeholder="blur" />
+              <Image src={scrambleMockup} alt="Scramble Mockup" fill placeholder="blur" priority/>
             </div>
             <div className="face-overlay">
               <div className="face-header">
@@ -60,7 +60,7 @@ const FeatureCube = () => {
           {/* Face 3: Timer */}
           <div className="cube__face cube__face--back">
             <div className="face-image-bg">
-              <Image src={timeMockup} alt="Timer Mockup" fill placeholder="blur" />
+              <Image src={timeMockup} alt="Timer Mockup" fill placeholder="blur" priority/>
             </div>
             <div className="face-overlay">
               <div className="face-header">

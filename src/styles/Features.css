@@ -9,7 +9,7 @@
   padding: 60px 20px;
   max-width: 1200px;
   margin: 0 auto;
-  color: var(--primary-color);
+  color: var(--text-main);
 }
 
 /* Header Section */
@@ -27,7 +27,7 @@
 
 .subtitle {
   font-size: 1.2rem;
-  color: #666;
+  color: var(--text-muted);
 }
 
 /* Grid Layout */
@@ -40,10 +40,10 @@
 
 /* Feature Cards */
 .feature-card {
-  background: white;
+  background: var(--bg-card);
   border-radius: 16px;
   padding: 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px var(--shadow-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
   display: flex;
@@ -52,7 +52,7 @@
 
 .feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 35px var(--shadow-strong);
 }
 
 .card-icon {
@@ -68,7 +68,7 @@
 }
 
 .card-description {
-  color: #555;
+  color: var(--text-muted);
   line-height: 1.6;
   margin-bottom: 20px;
   flex-grow: 1;
@@ -80,7 +80,7 @@
   height: auto;
   border-radius: 8px;
   margin-top: 15px;
-  border: 1px solid #eee;
+  border: 1px solid var(--border-color);
 }
 
 /* Feature List (Timer) */
@@ -94,7 +94,7 @@
 .feature-list li {
   margin-bottom: 8px;
   font-size: 0.95rem;
-  color: #444;
+  color: var(--text-muted);
 }
 
 /* Badges */

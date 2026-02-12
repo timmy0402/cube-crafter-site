@@ -1,7 +1,7 @@
 /* Default desktop styles */
 .footer {
     display: flex;
-    background-color: var(--secondary-color);
+    background-color: var(--bg-navbar);
     justify-content: space-between; 
     align-items: center;
     padding: 20px; /* Increased padding */

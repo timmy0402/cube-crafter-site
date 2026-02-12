@@ -19,8 +19,9 @@ const Hero = () => {
                 <div className="hero-content">
                     <h1>Scramble & Solve with Ease</h1>
                     <p>
-                        Join Cube Crafter and master the art of solving Rubik's
-                        Cubes.
+                        Elevate your Discord server with Cube Crafter. Get
+                        official WCA scrambles, visual guides, and advanced
+                        solve tracking directly in your community.
                     </p>
                     <ServerCount />
                     <div className="hero-buttons">

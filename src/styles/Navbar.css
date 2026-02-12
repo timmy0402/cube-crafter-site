@@ -4,13 +4,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px; /* Increased padding */
-    background-color: rgba(218, 228, 255, 0.95); /* Semi-transparent */
+    background-color: var(--bg-navbar);
     backdrop-filter: blur(10px); /* Glassmorphism effect */
     color: var(--primary-color);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px var(--shadow-color);
     position: sticky;
     top: 0;
     z-index: 100;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nav-left {
@@ -28,7 +29,8 @@
 
 .nav-right {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    gap: 20px;
 }
 
 .nav-right a {
@@ -60,9 +62,23 @@
     color: var(--primary-hover);
 }
 
+.nav-right .invite-btn {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-right .invite-btn:hover {
+    color: var(--btn-text);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
+        position: relative;
         flex-direction: column;
         padding: 15px 20px;
     }
@@ -72,5 +88,6 @@
         gap: 20px;
         width: 100%;
         justify-content: center;
+        flex-wrap: wrap;
     }
 }

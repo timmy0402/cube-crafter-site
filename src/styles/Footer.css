@@ -7,6 +7,7 @@
     padding: 20px; /* Increased padding */
     width: 100%;
     margin-top: auto; /* Push to bottom if flex container */
+    flex-wrap: wrap; /* Allow wrapping on very small screens */
 }
 
 .footer-left {
@@ -17,14 +18,16 @@
 .footer-right {
     color: var(--primary-color);
     font-weight: bold;
+    text-align: right;
 }
 
 .footer-right ul {
     list-style: none; 
     padding: 0;
     margin: 0;
-    display: flex; /* Horizontal list for desktop usually looks better, but keeping logic similar */
+    display: flex; 
     gap: 15px;
+    justify-content: flex-end;
 }
 
 
@@ -41,17 +44,24 @@
 /* Responsive styles for phones */
 @media (max-width: 768px) {
     .footer {
-        flex-direction: column;
-        align-items: flex-start;
-        position: static; 
+        padding: 15px;
+        /* Keep row layout to have logo left and links right */
+        flex-direction: row;
+        align-items: center;
     }
 
     .footer-left {
-        margin-bottom: 15px;
+        /* No margin needed if side-by-side */
+        margin-bottom: 0;
+    }
+
+    .footer-right {
+        font-size: 0.9rem; /* Slightly smaller text on mobile */
     }
 
     .footer-right ul {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: column; /* Stack links vertically on the right side if needed, or row */
+        gap: 5px;
+        align-items: flex-end; /* Align items to the right */
     }
 }

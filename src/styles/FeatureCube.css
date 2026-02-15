@@ -11,6 +11,7 @@
 
 .cube {
   --cube-size: min(500px, 90vw);
+  --apothem: calc(var(--cube-size) * 0.688);
   width: var(--cube-size);
   height: var(--cube-size);
   position: relative;
@@ -30,11 +31,8 @@
   box-shadow: 0 20px 50px var(--shadow-color);
 }
 
-/* 3D Positioning */
-.cube__face--front  { transform: rotateY(0deg) translateZ(calc(var(--cube-size) / 2)); }
-.cube__face--right  { transform: rotateY(90deg) translateZ(calc(var(--cube-size) / 2)); }
-.cube__face--back   { transform: rotateY(180deg) translateZ(calc(var(--cube-size) / 2)); }
-.cube__face--left   { transform: rotateY(270deg) translateZ(calc(var(--cube-size) / 2)); }
+/* 3D Positioning handled inline for dynamic faces */
+/* .cube__face--front, --right, etc. removed in favor of inline styles */
 
 /* Immersive Image Styling */
 .face-image-bg {

@@ -39,6 +39,16 @@ const commands = [
         usage: "/personal_bests puzzle: 3x3"
     },
     {
+        name: "/daily",
+        description: "Start your daily challenge! Generates today's official scramble for you to solve and submit.",
+        usage: "/daily"
+    },
+    {
+        name: "/leaderboard",
+        description: "View the current server leaderboard for today's daily challenge.",
+        usage: "/leaderboard"
+    },
+    {
         name: "/invite",
         description: "Generates an invite link to add Cube Crafter to your own Discord server.",
         usage: "/invite"

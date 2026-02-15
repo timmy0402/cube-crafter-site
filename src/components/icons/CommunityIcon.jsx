@@ -1,6 +1,6 @@
 import React from "react";
 
-const CommunityIcon = ({ width = 64, height = 64, color = "#23214c" }) => (
+const CommunityIcon = ({ width = 64, height = 64, color = "currentColor" }) => (
   <svg
     width={width}
     height={height}

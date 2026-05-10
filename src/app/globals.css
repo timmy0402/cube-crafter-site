@@ -23,6 +23,15 @@
   --bg-gradient-end: #dbeafe;
   --card-bg-transparent: rgba(255, 255, 255, 0.5);
   --border-transparent: rgba(255, 255, 255, 0.8);
+
+  /* Cube-sticker palette — used by decorative elements on the home page. */
+  --sticker-y: #f7d046;
+  --sticker-r: #e64545;
+  --sticker-g: #2bb673;
+  --sticker-b: #2a6fdb;
+  --sticker-o: #f08a36;
+  --sticker-w: #ffffff;
+  --sticker-frame: #1a1830;
 }
 
 [data-theme='dark'] {
@@ -50,6 +59,7 @@
   --bg-gradient-end: #1e1b4b; /* Dark indigo */
   --card-bg-transparent: rgba(30, 41, 59, 0.5);
   --border-transparent: rgba(255, 255, 255, 0.1);
+  --sticker-frame: #0b0a1a;
 }
 
 html,

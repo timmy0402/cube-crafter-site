@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://cubecrafter.azurewebsites.net/';
+  const baseUrl = 'https://cube-crafter-site.vercel.app';
 
   return [
     {

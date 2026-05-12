@@ -9,6 +9,11 @@ const commands = [
         usage: "/scramble puzzle: 3x3"
     },
     {
+        name: "/sessions",
+        description: "Generates multiple scrambles of the same puzzle type",
+        usage: "/sessions puzzle: 3x3 count: 10"
+    },
+    {
         name: "/stopwatch",
         description: "Launches an interactive stopwatch to record your solves directly in Discord. Automatically logs results.",
         usage: "/stopwatch puzzle: 3x3"
@@ -22,6 +27,11 @@ const commands = [
         name: "/delete_time",
         description: "Removes a specific solve from your history using its unique TimeID (found in /time output).",
         usage: "/delete_time id: 12345"
+    },
+    {
+        name: "/adjust_time",
+        description: "Adjust a speicific solve from your history by adding +2 or mark DNF",
+        usage: "/adjust_time id: 123 operation: +2/DNF"
     },
     {
         name: "/oll",
@@ -42,6 +52,11 @@ const commands = [
         name: "/daily",
         description: "Start your daily challenge! Generates today's official scramble for you to solve and submit.",
         usage: "/daily"
+    },
+    {
+        name: "/reminder",
+        description: "Daily reminder on your DM at any timezone you like",
+        usage: "/reminder set/show/disable"
     },
     {
         name: "/leaderboard",

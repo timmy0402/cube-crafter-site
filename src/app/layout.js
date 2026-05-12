@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -16,7 +17,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://cubecrafter.azurewebsites.net/'),
+  metadataBase: new URL('https://cubecrafter.app'),
   title: {
     default: "Cube Crafter",
     template: "%s | Cube Crafter"
@@ -28,7 +29,7 @@ export const metadata = {
   openGraph: {
     title: "Cube Crafter - The Ultimate Speedcubing Discord Bot",
     description: "Generate scrambles, time your solves, and track your progress directly in Discord.",
-    url: 'https://cubecrafter.azurewebsites.net/',
+    url: 'https://cubecrafter.app',
     siteName: 'Cube Crafter',
     locale: 'en_US',
     type: 'website',
@@ -58,6 +59,7 @@ export default function RootLayout({ children }) {
           {children}
           <Footer/>
         </ThemeProvider>
+        <Analytics/>
       </body>
     </html>
   );

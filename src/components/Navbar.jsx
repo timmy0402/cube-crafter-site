@@ -34,6 +34,7 @@ const Navbar = () => {
                 <Link href="/features" aria-label="Features" onClick={() => setIsMenuOpen(false)}>Features</Link>
                 <Link href="/commands" aria-label="Commands" onClick={() => setIsMenuOpen(false)}>Commands</Link>
                 <Link href="/contact" aria-label="Contact" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+                <Link href="/feature-request" aria-label="Feature Request" onClick={() => setIsMenuOpen(false)}>Feature Request</Link>
                 <div className="mobile-only-theme-toggle">
                      <ThemeToggle />
                 </div>

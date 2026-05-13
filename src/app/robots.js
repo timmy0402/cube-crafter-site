@@ -5,6 +5,6 @@ export default function robots() {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://cube-crafter-site.vercel.app/sitemap.xml',
+    sitemap: 'https://cubecrafter.app/sitemap.xml',
   }
 }

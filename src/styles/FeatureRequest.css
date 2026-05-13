@@ -1,0 +1,212 @@
+/* FeatureRequest.css */
+.fr-container {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, rgba(255,255,255,0) 0%, var(--bg-navbar-blur) 100%);
+}
+
+.fr-card {
+    background: var(--bg-card);
+    width: 100%;
+    max-width: 720px;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px var(--shadow-color);
+    border: 1px solid var(--border-transparent);
+    transition: background-color 0.3s ease;
+}
+
+.fr-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.fr-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--bg-main);
+    color: var(--primary-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.fr-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    font-weight: 800;
+}
+
+.fr-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.fr-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.fr-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.fr-field label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: 0.3px;
+}
+
+.fr-optional {
+    font-weight: 500;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-left: 0.25rem;
+}
+
+.fr-field input,
+.fr-field select,
+.fr-field textarea {
+    background: var(--bg-main);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-family: inherit;
+    width: 100%;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.fr-field textarea {
+    resize: vertical;
+    min-height: 140px;
+    line-height: 1.5;
+}
+
+.fr-field input:focus,
+.fr-field select:focus,
+.fr-field textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--bg-navbar-blur);
+    background: var(--bg-card);
+}
+
+.fr-field input::placeholder,
+.fr-field textarea::placeholder {
+    color: var(--text-muted);
+    opacity: 0.7;
+}
+
+/* Honeypot — visually hidden but still focusable by automated bots */
+.fr-honeypot {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.fr-submit-btn {
+    margin-top: 0.5rem;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    border-radius: 10px;
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
+    font-family: inherit;
+}
+
+.fr-submit-btn:hover:not(:disabled) {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.fr-submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.fr-error {
+    color: #c0392b;
+    background: rgba(192, 57, 43, 0.08);
+    border: 1px solid rgba(192, 57, 43, 0.25);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+}
+
+[data-theme='dark'] .fr-error {
+    color: #f8a8a0;
+    background: rgba(192, 57, 43, 0.15);
+}
+
+.fr-success {
+    text-align: center;
+    padding: 1.5rem 0.5rem;
+}
+
+.fr-success h2 {
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.fr-success p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 1.75rem;
+}
+
+.fr-secondary-btn {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 0.7rem 1.5rem;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.fr-secondary-btn:hover {
+    background: var(--primary-color);
+    color: var(--btn-text);
+}
+
+@media (max-width: 600px) {
+    .fr-container {
+        padding: 1.5rem 1rem;
+    }
+
+    .fr-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .fr-title {
+        font-size: 2rem;
+    }
+}

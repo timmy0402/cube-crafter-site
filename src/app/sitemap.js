@@ -27,6 +27,12 @@ export default function sitemap() {
       priority: 0.5,
     },
     {
+      url: `${baseUrl}/feature-request`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.5,
+    },
+    {
       url: `${baseUrl}/policy`,
       lastModified: new Date(),
       changeFrequency: 'yearly',

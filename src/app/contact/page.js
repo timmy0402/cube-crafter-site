@@ -1,10 +1,14 @@
-'use client';
 import React from "react";
 import Link from "next/link";
 import "../../styles/Contact.css";
 import CommunityIcon from "@/components/icons/CommunityIcon";
 import LightbulbIcon from "@/components/icons/LightbulbIcon";
 import MailIcon from "@/components/icons/MailIcon";
+
+export const metadata = {
+    title: "Contact",
+    description: "Get in touch with the Cube Crafter team. Join our Discord community, request features, or report bugs.",
+};
 
 const Contact = () => {
     return (

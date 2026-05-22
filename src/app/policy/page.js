@@ -1,6 +1,11 @@
 import React from "react";
 import '../../styles/Features.css';
 
+export const metadata = {
+    title: "Privacy Policy",
+    description: "Cube Crafter privacy policy. Learn how we collect, use, and protect your data when using our Discord bot.",
+};
+
 const Policy = () => {
   return (
     <>

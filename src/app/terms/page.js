@@ -1,6 +1,11 @@
 import React from "react";
 import '../../styles/Features.css';
 
+export const metadata = {
+    title: "Terms of Service",
+    description: "Cube Crafter terms of service. Rules, responsibilities, and guidelines for using our Discord bot.",
+};
+
 const Terms = () => {
   return(
     <>

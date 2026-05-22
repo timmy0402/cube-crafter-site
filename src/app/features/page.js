@@ -1,7 +1,11 @@
-'use client';
 import React from "react";
 import FeatureCube from "@/components/FeatureCube";
 import "../../styles/Features.css"; // Keep general layout styles
+
+export const metadata = {
+    title: "Features",
+    description: "Explore all Cube Crafter features: WCA scrambles, image generation, advanced timer, daily competitions, and solve tracking.",
+};
 
 const Features = () => {
     return (

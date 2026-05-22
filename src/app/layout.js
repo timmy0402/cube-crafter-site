@@ -38,6 +38,9 @@ export const metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: 'https://cubecrafter.app',
+  },
   verification: {
     google: 'google26571947d0b2bcc9',
   },

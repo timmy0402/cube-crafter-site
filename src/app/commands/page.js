@@ -1,6 +1,10 @@
-'use client';
 import React from "react";
 import "../../styles/Commands.css";
+
+export const metadata = {
+    title: "Commands",
+    description: "Complete Cube Crafter command reference: /scramble, /stopwatch, /time, /daily, /oll, /pll, and more Discord bot commands.",
+};
 
 const commands = [
     {

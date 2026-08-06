@@ -12,22 +12,12 @@ const STATS = [
     { v: "24/7", l: "Uptime" },
 ];
 
-const STICKER_COLORS = [
-    'var(--sticker-y)', 'var(--sticker-r)', 'var(--sticker-w)',
-    'var(--sticker-g)', 'var(--sticker-y)', 'var(--sticker-b)',
-    'var(--sticker-w)', 'var(--sticker-o)', 'var(--sticker-r)',
-];
-
 const Hero = () => {
     return (
         <section className="hero">
             <div className="hero-glow" aria-hidden="true" />
             <div className="hero-grid">
                 <div className="hero-copy">
-                    <div className="hero-eyebrow">
-                        <span className="hero-eyebrow-dot" aria-hidden="true" />
-                        Discord bot for cubers
-                    </div>
                     <h1 className="hero-title">
                         Scramble. Solve. Stay&nbsp;sharp.
                     </h1>
@@ -48,11 +38,11 @@ const Hero = () => {
                             See features
                         </Link>
                         <a
-                            className="hero-vote"
+                            className="btn btn-secondary"
                             href="https://top.gg/bot/1197268536918278236"
                             aria-label="Vote on top.gg"
                         >
-                            ★ Vote on top.gg
+                            Vote on top.gg
                         </a>
                     </div>
                     <ServerCount />
@@ -76,11 +66,6 @@ const Hero = () => {
                             className="hero-logo"
                             priority
                         />
-                    </div>
-                    <div className="sticker-face">
-                        {STICKER_COLORS.map((c, i) => (
-                            <span key={i} style={{ background: c }} />
-                        ))}
                     </div>
                 </div>
             </div>
